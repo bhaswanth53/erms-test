@@ -2,6 +2,10 @@
 
 Employee Role Management System
 
+![](2022-07-28-07-48-38.png)
+
+![](2022-07-28-07-48-56.png)
+
 ### Installation
 
 1. Run composer install.
