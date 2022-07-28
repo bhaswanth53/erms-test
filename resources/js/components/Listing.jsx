@@ -1,23 +1,28 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import { NavLink } from 'react-router-dom';
-import axios from 'axios'
+import axios from 'axios' // Import axios library
 
+// Initiate state
 const initialstate = {
     employees: []
 }
 
 class Listing extends Component {
-    state = initialstate
+    state = initialstate // Define component state
 
+    // Run the function at the time component is mounted.
     componentDidMount() {
+        // Get employees from public/employees.json
         axios.get('/data/employees.json')
             .then((response) => {
+                // Assign employees to employees array in state
                 this.setState({
                     employees: response.data
                 })
             })
             .catch((error) => {
+                // Log when an error occured
                 console.log('An error occured!')
             })
     }
@@ -30,11 +35,14 @@ class Listing extends Component {
                         <p className="title">Employees List</p>
                     </div>
                     <div className="col-md-6 text-right">
+                        {/* Create a link to /create page. NavLink component will redirect to link without browser reloading */}
                         <NavLink to="/create">
                             <button className="btn btn-primary btn-sm">Create Employee</button>
                         </NavLink>
                     </div>
                 </div>
+
+                {/* Check if employees are there in the employees state */}
                 {this.state.employees.length > 0 ? (
                     <div className="table-responsive">
                         <table className="table table-bordered table-striped">
@@ -46,6 +54,7 @@ class Listing extends Component {
                                 </tr>
                             </thead>
                             <tbody>
+                                {/* If employees are there, then run a loop to display each eployee details */}
                                 {this.state.employees.map((item, i) => {
                                     return (
                                         <tr key={i}>
@@ -68,5 +77,6 @@ class Listing extends Component {
     }
 }
 
+// Export component
 export default Listing
 

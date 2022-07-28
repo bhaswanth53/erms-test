@@ -36,6 +36,8 @@ php artisan serve
 
 1. No need to change .env file since the application didn't use any database.
 
+2. Laravel logs will be inside storage/logs/laravel.log
+
 ### Additional Packages Used :
 
 1. https://github.com/donjajo/php-jsondb
