@@ -1,0 +1,22 @@
+[
+    {
+        "id": "202207280159370dhXb",
+        "name": "Test Alert",
+        "email": "bhaswanthkumar6@gmail.com",
+        "role": "Administrator"
+    }
+,
+    {
+        "id": "20220728020010HQgHH",
+        "name": "Bhaswanth Chiruthanuru",
+        "email": "bhaswanth22@gmail.com",
+        "role": "Subscriber"
+    }
+,
+    {
+        "id": "20220728020041DmC8v",
+        "name": "Bhaswanth",
+        "email": "bhaswanth@gmail.com",
+        "role": "Editor"
+    }
+]
